@@ -52,7 +52,7 @@ const receiptBtnClose = document.querySelector('.receipt__window-btn')
 let arrProducts = [],
 totalName = 'обрашайтес данным контактам',
 totalPrice = '+998 90 010 39 34',
-totalKcall = '@croso.uz',
+totalKcall = '@abduzohir_mmm',
 totalEmail = 'abduzohir7@gamil.com'
 
 addCart.addEventListener('click', function(){
