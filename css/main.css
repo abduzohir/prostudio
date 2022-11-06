@@ -138,7 +138,7 @@ video{
   font-family: 'roboto';
 }
 .desc p{
-  text-align: center;
+  /* text-align: center; */
   margin-bottom: 15px;
 }
 /*  */
@@ -227,9 +227,13 @@ video{
   }
   .footer a{
     /* margin: 5px 0; */
-    font-size: 18px;
+    font-size: 8px;
+  }
+  .blocks.container{
+    width: 100%;
   }
   .blocks{
+    width: 100%;
     flex-direction: column;
     align-items: center;
     padding-top: 25px;
@@ -247,10 +251,3 @@ video{
 }
 @media (max-width: 480px){
 }
-
-
-
-
-
-
-
