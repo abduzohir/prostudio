@@ -122,7 +122,9 @@ video{
   text-align: start;
   margin: 0 auto;
 }
-
+.suport{
+  margin-bottom: -5px;
+}
 .video .title{
   width: 100%;
   /* height: 65%; */
