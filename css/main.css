@@ -270,6 +270,11 @@ video{
   }
 }
 @media (max-width: 768px){
+   video{
+    width: calc(200% + 210.49107vw);
+    height: calc(131.42857px + 110.49107vw);
+    min-height: 100%;
+  }
 }
 @media (max-width: 576px){
   .footer-info{
