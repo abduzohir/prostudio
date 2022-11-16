@@ -79,6 +79,10 @@ video{
   font-size: 22px;
   font-weight: 700;
   color: #00AA07;
+   /* background: #fff;
+  width: 100%;
+  display: flex;
+  justify-content: center; */
 }
 .block .price_200{
   position: absolute;
@@ -87,6 +91,10 @@ video{
   font-size: 22px;
   font-weight: 700;
   color: #AA8F00;
+    /* background: #fff;
+  width: 100%;
+  display: flex;
+  justify-content: center; */
 }
 .block .price_400{
   position: absolute;
@@ -95,12 +103,21 @@ video{
   font-size: 22px;
   font-weight: 700;
   color: #AA0000;
+    /* background: #fff;
+  width: 100%;
+  display: flex;
+  justify-content: center; */
 }
 .block h3{
   position: absolute;
   top: 5px;
   font-weight: 500;
   font-family: Arial, Helvetica, sans-serif;
+  /* background: #000;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 5px 0; */
 }
 .block img{
   width: 100%;
@@ -111,9 +128,14 @@ video{
 .suport img{
   width: 100%;
 }
+.suport{
+  display: flex;
+  align-items: center;
+  margin-bottom: -5px;
+}
 .suport .title{
   width: 100%;
-  height: 65%;
+  /* height: 65%; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -122,8 +144,13 @@ video{
   text-align: start;
   margin: 0 auto;
 }
-.suport{
-  margin-bottom: -5px;
+.suport .title h2{
+  text-transform: uppercase;
+  margin-bottom: 35px;
+  font-size: 40px;
+  font-weight: 700;
+  font-family: 'roboto';
+  margin-bottom: 5px;
 }
 .video .title{
   width: 100%;
@@ -257,12 +284,12 @@ video{
   .blocks{
     flex-direction: column;
     align-items: center;
-    padding-top: 25px;
-    padding-bottom: 35px;
+    /* padding-top: 25px;
+    padding-bottom: 35px; */
   }
   .block{
     width: 100%;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
   }
   .footer .container{
     padding-top: 5px;
@@ -271,4 +298,18 @@ video{
   }
 }
 @media (max-width: 480px){
+  .desc p{
+    font-size: 12px;
+  }
+  .suport .title h2{
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 700;
+    font-family: 'roboto';
+    margin-bottom: 5px;
+  }
+  .suport .title p{
+    font-size: 12px;
+    line-height: 16px;
+  }
 }
