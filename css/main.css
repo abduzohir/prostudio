@@ -219,6 +219,9 @@ video{
   font-family: 'roboto';
   margin-bottom: 5px;
 }
+.suport .title p{
+  margin-bottom: 10px;
+}
 .video .title{
   width: 100%;
   /* height: 65%; */
@@ -275,7 +278,8 @@ form{
   display: flex;
   justify-content: center;
 }
-.addCart {
+.addCart,
+.suport_btn {
   padding: 10px 80px;
   color: #fff;
   background: transparent;
@@ -283,7 +287,8 @@ form{
   border: 1px solid #fff;
   cursor: pointer;
 }
-.addCart:hover {
+.addCart:hover,
+.suport_btn:hover {
   color: #000;
   background: #fff;
   transition: background-color .5s;
@@ -360,6 +365,12 @@ form{
   .domen_bg{
     height: calc(40.42857px + 110.49107vw);
   }
+  .suport{
+    min-height: 100%;
+  }
+  .suport img{
+    height: calc(40.42857px + 110.49107vw);
+  }
   .domen p{
     height: 40%;
   }
@@ -369,6 +380,9 @@ form{
     height: 60%;
     width: 90%;
   }
+  .suport img{
+    width: 200%;
+  }
 }
 @media (max-width: 576px){
   .footer-info{
@@ -377,23 +391,18 @@ form{
     align-items: flex-end;
   }
   .footer a{
-    /* margin: 5px 0; */
     font-size: 18px;
   }
   .blocks{
     flex-direction: column;
     align-items: center;
-    /* padding-top: 25px;
-    padding-bottom: 35px; */
   }
   .block{
     width: 100%;
-    /* margin-bottom: 10px; */
   }
   .footer .container{
     padding-top: 5px;
     display: flex;
-    /* flex-direction: column; */
   }
 }
 @media (max-width: 480px){
