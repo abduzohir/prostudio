@@ -8,7 +8,7 @@ const receiptBtnClose = document.querySelector('.receipt__window-btn')
 let arrProducts = [],
 totalName = 'обрашайтес данным контактам',
 totalPrice = '+998 90 010 39 34',
-totalKcall = '@abduzohir_mmm',
+totalKcall = '@prostudio.pages.dev',
 totalEmail = 'abduzohir7@gamil.com'
 
 addCart.addEventListener('click', function(){
