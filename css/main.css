@@ -25,7 +25,7 @@
   margin-top: 40px;
   width: 100%;
   min-height: 100vh;
-  background: rgb(31, 31, 31);
+  background: rgb(0, 0, 0);
   color: #ffffff;
   overflow: hidden;
 }
@@ -165,7 +165,7 @@ video{
   top: 30px;
   width: 100%;
   display: flex;
-  color: #000;
+  color: rgb(255, 255, 255);
   text-transform: uppercase;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 700;
@@ -180,7 +180,7 @@ video{
   display: flex;
   align-items: center;
   font-weight: 300;
-  color: #000;
+  color: rgb(255, 255, 255);
   padding: 0 15px;
   font-size: 18px;
 }
@@ -192,7 +192,7 @@ video{
   display: flex;
   align-items: center;
   font-weight: 300;
-  color: #000;
+  color: rgb(255, 255, 255);
   padding: 0 15px;
   font-size: 18px;
 }
@@ -388,22 +388,17 @@ form{
     height: 40%;
   }
   .domen span{
-    position: absolute;
     top: 40px;
     width: 400px;
     height: 90%;
-    display: flex;
     align-items: flex-end;
-    font-weight: 300;
-    color: #000;
-    padding: 0 15px;
     font-size: 18px;
   }
   .website_domen{
-    left: 5%;
-    bottom: 10%;
+    left: 10%;
+    bottom: 12%;
     height: 60%;
-    width: 90%;
+    width: 80%;
   }
   .suport img{
     width: 200%;
