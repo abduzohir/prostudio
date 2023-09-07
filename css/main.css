@@ -15,22 +15,32 @@
 ::-webkit-scrollbar-thumb {border-radius: 4px;background: rgb(206, 206, 206);}
 /* container */
 .container{
-  /* max-width: 1140px; */
   width: 86%;
   margin: 0 auto;
-  /* padding: 0 15px; */
+  max-width: 1920px;
+  /* min-height: 40px; */
+}
+body{
+  display: flex;  
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #151515;
 }
 /* wrapp */
 .wrapp{
+  position: relative;
   margin-top: 40px;
+  max-width: 1920px;
   width: 100%;
   min-height: 100vh;
-  background: rgb(0, 0, 0);
+  background: rgb(255, 255, 255);
   color: #ffffff;
   overflow: hidden;
 }
 /* banner */
 .banner{
+
   width: 100%;
   min-height: 40px;
   background: #000;
@@ -62,22 +72,25 @@
 }
 video{
   width: 100%;
-  /* height: 70vh; */
 }
 .blocks{
   display: flex;
   justify-content: space-between;
-  /* padding: 10px; */
+  background: #000;
 }
-.block{
-  width: 33.3333%;
+.blocks a{
+  width: 33.33333%;
   height: 22vh;
-  /* border: 1px solid red; */
-  /* margin: 10px 0; */
   overflow: hidden;
   display: flex;
   justify-content: center;
   position: relative;
+  cursor: pointer;
+}
+.block{
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 .block .price_100{
   position: absolute;
@@ -86,10 +99,9 @@ video{
   font-size: 22px;
   font-weight: 700;
   color: #00AA07;
-   /* background: #fff;
-  width: 100%;
-  display: flex;
-  justify-content: center; */
+  transition: 0.4s;
+  animation: blockAnimaition-1 0.4s;
+  padding: 0 5px;
 }
 .block .price_200{
   position: absolute;
@@ -98,10 +110,9 @@ video{
   font-size: 22px;
   font-weight: 700;
   color: #AA8F00;
-    /* background: #fff;
-  width: 100%;
-  display: flex;
-  justify-content: center; */
+  transition: 0.4s;
+  animation: blockAnimaition-2 0.4s;
+  padding: 0 5px;
 }
 .block .price_400{
   position: absolute;
@@ -110,40 +121,56 @@ video{
   font-size: 22px;
   font-weight: 700;
   color: #AA0000;
-    /* background: #fff;
-  width: 100%;
-  display: flex;
-  justify-content: center; */
+  transition: 0.4s;
+  animation: blockAnimaition-3 0.4s;
+  padding: 0 5px;
+}
+.blocks a:nth-of-type(1):hover p{
+  animation: blockAnimaitionHover-1 0.4s;
+  height: 40%;
+  width: none;
+  transform: scale(1.4);
+  border: 3px solid black;
+  transition: border 0s, transform 0.4s;
+  color: rgb(0, 118, 0);
+  background: #000;
+}
+.blocks a:nth-of-type(2):hover p{
+  animation: blockAnimaitionHover-2 0.4s;
+  height: 50%;
+  width: none;
+  transform: scale(1.4);
+  border: 3px solid black;
+  transition: border 0s, transform 0.4s;
+  background: #000;
+}
+.blocks a:nth-of-type(3):hover p{
+  background: #000;
+  animation: blockAnimaitionHover-3 0.4s;
+  height: 60%;
+  width: none;
+  transform: scale(1.4);
+  border: 3px solid black;
+  transition: border 0s, transform 0.4s;
+}
+.blocks a{
+  color: #fff;
+  font-weight: 500;
 }
 .block h3{
   position: absolute;
   top: 5px;
   font-weight: 500;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial;
+  transition: 0.4s;
 }
-.block_p{
-  display: none;
-  text-align: left;
-  transition: 5s;
-}
-.block:hover .block_p{
-  display: flex;
-  align-items: center;
-  position: absolute;
-  top: 0px;
-  font-size: 12px;
-  height: 100%;
-  width: 86%;
-  font-weight: 300;
-  font-family: 'montserrat';
-  text-align: center;
-  animation-name: blo;
-  animation-duration: 0.5s;
+.block:hover h3{
+  transform: translateY(-50px);
 }
 .block img{
   width: 100%;
   filter: brightness(35%);
-  object-fit: inherit;
+  object-fit: cover;
   /* height: 150%; */
 }
 .block:hover img{
@@ -151,13 +178,93 @@ video{
   transition: filter 0.5s;
   object-fit: cover;
 }
-.domen {
+
+.portfolio{
+  position: relative;
   width: 100%;
   height: 100%;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.portfolioBtn{
+  position: absolute;
+}
+.portfolio img{
+  width: 100%;
+  object-fit: cover;
+}
+.statistik{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
 }
-.domen_bg{
+.statistik .AboutAs{
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  margin-top: 50px;
+  align-items: center;
+}
+.AboutAs img{
+  height: 75px;
+  width: 75px;
+  margin-right: 40px;
+}
+.AboutAs div{
+  display: flex;
+  align-items: center;
+  /* width: 33.333%; */
+  height: 100%;
+}
+.AboutAsComent{
+  display: flex;
+  flex-direction: column;
+  align-items: start !important;
+  width: 100% !important;
+}
+.AboutAsComent p{
+  line-height: 40px;
+  font-size: 40px;
+  color: #AA0000;
+  margin-bottom: 10px;
+}
+.AboutAsComent p span{
+  font-size: 22px;
+}
+.AboutAsComent span{
+  font-size: 16px;
+}
+.AAC1 p span{
+  line-height: 28px;
+}
+.AAC2{
+  margin-right: 15px;
+}
+.AAC2 p{
+  align-items: start;
+  flex-direction: column;
+}
+
+
+.statistik h3{
+  font-weight: 600;
+  font-size: 50px;
+  min-height: 90%;
+  position: absolute;
+}
+.domen{
+  /* width: 100%; */
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  /* background: url(../images/wwwfon.jpg); */
+}
+.black_bg{
   width: 100%;
 }
 .domen h3{
@@ -211,7 +318,8 @@ video{
 .suport{
   display: flex;
   align-items: center;
-  margin-bottom: -5px;
+  width: 100%;
+  /* margin-bottom: -5px; */
 }
 .suport .title{
   width: 100%;
@@ -222,7 +330,7 @@ video{
   position: absolute;
   background: transparent;
   text-align: start;
-  margin: 0 auto;
+  /* margin: 0 auto; */
 }
 .suport .title h2{
   text-transform: uppercase;
@@ -263,6 +371,9 @@ video{
   color: #000;
   background: #fff;
 }
+.footer{
+  padding: 15px 0 10px 0;
+}
 .footer .container{
   display: flex;
   justify-content: space-between;
@@ -292,19 +403,22 @@ form{
   justify-content: center;
 }
 .addCart,
-.suport_btn {
+.suport_btn,
+.portfolioBtn {
   padding: 10px 80px;
   color: #fff;
   background: transparent;
   font-size: 20px;
+  font-weight: 700;
   border: 1px solid #fff;
+  transition: 0.4s;
   cursor: pointer;
 }
 .addCart:hover,
-.suport_btn:hover {
+.suport_btn:hover,
+.portfolioBtn:hover {
   color: #000;
   background: #fff;
-  transition: background-color .5s;
 }
 .receipt {
   width: 100%;
@@ -319,6 +433,9 @@ form{
   transition: 0.5s;
   justify-content: center;
   align-items: center;
+}
+.receipt a{
+  color: rgb(0, 136, 255);
 }
 .receipt.active .receipt__window{
   width: 30%;
@@ -363,6 +480,11 @@ form{
   .receipt.active .receipt__window{
     width: 86%;
   }
+  .AboutAs img{
+    height: 70px;
+    width: 70px;
+    margin-right: 25px;
+  }
 }
 @media (max-width: 768px){
   video{
@@ -370,7 +492,7 @@ form{
     height: calc(131.42857px + 110.49107vw);
     min-height: 100%;
   }
-  .domen {
+  .domen,.portfolio {
     min-height: 100%;
     width: 100%;
     overflow: hidden;
@@ -381,7 +503,9 @@ form{
   .suport{
     min-height: 100%;
   }
-  .suport img{
+  .suport img,
+  .portfolio img,
+  .black_bg{
     height: calc(40.42857px + 110.49107vw);
   }
   .domen p{
@@ -403,6 +527,7 @@ form{
   .suport img{
     width: 200%;
   }
+
 }
 @media (max-width: 576px){
   .footer-info{
@@ -419,6 +544,11 @@ form{
   }
   .block{
     width: 100%;
+  }
+  .statistik .AboutAs{
+    flex-direction: column;
+    height: 60%;
+    align-items: start;
   }
   .footer .container{
     padding-top: 5px;
@@ -440,11 +570,21 @@ form{
     font-size: 12px;
     line-height: 16px;
   }
+  .AboutAsComent p{
+    font-size: 30px;
+  }
 }
 @media (max-width: 385px){
   .domen p {
     font-size: 14px;
   };
+}
+
+@media (min-width: 1920px){
+  .container{
+    padding: 0 15px;
+  }
+
 }
 @keyframes blo{
   0%{
@@ -452,5 +592,53 @@ form{
   }
   100%{
     width: 86%;
+  }
+}
+@keyframes blockAnimaitionHover-1 {
+  0%{
+    height: 13%;
+  }
+  100%{
+    height: 40%;
+  }
+}
+@keyframes blockAnimaition-1 {
+  0%{
+    height: 40%;
+  }
+  100%{
+    height: 13%;
+  }
+}
+@keyframes blockAnimaitionHover-2 {
+  0%{
+    height: 13%;
+  }
+  100%{
+    height: 50%;
+  }
+}
+@keyframes blockAnimaition-2 {
+  0%{
+    height: 50%;
+  }
+  100%{
+    height: 13%;
+  }
+}
+@keyframes blockAnimaitionHover-3 {
+  0%{
+    height: 13%;
+  }
+  100%{
+    height: 60%;
+  }
+}
+@keyframes blockAnimaition-3 {
+  0%{
+    height: 60%;
+  }
+  100%{
+    height: 13%;
   }
 }

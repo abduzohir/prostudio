@@ -7,9 +7,9 @@ const receiptBtnClose = document.querySelector('.receipt__window-btn')
 
 let arrProducts = [],
 totalName = 'обрашайтес данным контактам',
-totalPrice = '+998 90 010 39 34',
-totalKcall = '@prostudio.pages.dev',
-totalEmail = 'abduzohir7@gamil.com'
+totalPrice = '<a href="tel:998900103934">+998 90 010 39 34</a>',
+totalKcall = '<a href="https://www.instagram.com/prostudio.pages.dev/">@prostudio.pages.dev</a>',
+totalEmail = '<a href="https://t.me/abduzohir_mmm">@abduzohir_mmm</a>'
 
 addCart.addEventListener('click', function(){
   for(let i = 0; i < arrProducts.length; i++){
@@ -17,7 +17,7 @@ addCart.addEventListener('click', function(){
     totalPrice += arrProducts[i].Summ()
     totalKcall += arrProducts[i].Kcall()
   }
-  receiptOut.innerHTML = `Для заказа ${totalName}\n\ninstagram: ${totalKcall}\nНомер тел: ${totalPrice}\nemail: ${totalEmail}`
+  receiptOut.innerHTML = `Для заказа ${totalName}\n\ninstagram: ${totalKcall}\nНомер тел: ${totalPrice}\nTelegram: ${totalEmail}`
   
   receipt.style.display = 'flex'
   setTimeout(function(){

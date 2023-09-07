@@ -1,0 +1,25 @@
+.onlineshop{
+  background: url(../images/online.jpg) no-repeat center center / cover;
+  min-height: 70vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.onlineshop::after{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: '';
+  background:   rgba(0, 0, 0, 0.35);
+}
+.onlineshop .title{
+  position: absolute;
+  z-index: 1;
+  color: #ffffff;
+  text-align: center;
+}
